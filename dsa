@@ -37,10 +37,10 @@ class Cart:
         print("Загальна вартість:", self.total_price(), "грн")
 
 
-# 🔹 Приклад використання:
+
 product1 = Product("Ноутбук", 15000)
 product2 = Product("Мишка", 500)
-product3 = Product("Клавіатура", 800, available)
+product3 = Product("Клавіатура", 4000, available)
 
 cart = Cart()
 cart.add_product(product1)
