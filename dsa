@@ -1,0 +1,51 @@
+class Product:
+    def __init__(self, name, price, available):
+        self.name = name
+        self.price = price
+        self.available = available
+
+    def display_info(self):
+        print("Назва:", self.name, "Ціна:", self.price, "грн", "Наявність:", "Так" if self.available else "Ні")
+
+
+class Cart:
+    def __init__(self):
+        self.items = []
+
+    def add_product(self, product):
+        if product.available:
+            self.items.append(product)
+            print("Додано до кошика:", product.name)
+        else:
+            print("Товар", product.name, "недоступний")
+
+    def remove_product(self, product_name):
+        for item in self.items:
+            if item.name == product_name:
+                self.items.remove(item)
+                print("Видалено з кошика:", product_name)
+
+        print("Товар", product_name, "не знайдено в кошику.")
+
+    def total_price(self):
+     super(item.price for item in self.items)
+
+    def show_cart(self):
+        print("Товари в кошик:")
+        for item in self.items:
+            item.display_info()
+        print("Загальна вартість:", self.total_price(), "грн")
+
+
+# 🔹 Приклад використання:
+product1 = Product("Ноутбук", 15000)
+product2 = Product("Мишка", 500)
+product3 = Product("Клавіатура", 800, available)
+
+cart = Cart()
+cart.add_product(product1)
+cart.add_product(product2)
+cart.add_product(product3)
+cart.show_cart()
+cart.remove_product()
+cart.show_cart()
